@@ -1,0 +1,28 @@
+<app-nav>   </app-nav>
+
+<div>
+    <p>
+        <label>Nombre: </label>
+        <input [(ngModel)]="nuevojugador.nombre" placeholder="Nombre">
+    </p>
+    <p>
+        <label>Apellido: </label>
+        <input [(ngModel)]="nuevojugador.apellido" placeholder="Apellido">
+    </p>
+    <p>
+        <label>Posicion: </label>
+        <input [(ngModel)]="nuevojugador.posicion" placeholder="Posicion">
+    </p>
+    <p>
+        <label>Imagen: </label>
+        <input [(ngModel)]="nuevojugador.imagen" placeholder="Imagen">
+    </p>
+
+    <ng-container *ngIf="contador==maxjugadores; else elseBlock">
+        No se pueden cargar mas jugadores
+    </ng-container>
+    <ng-template #elseBlock>
+        <button (click)="agregarJugador()">Agregar Dato</button>
+    </ng-template>
+    <button [routerLink]="['/home']">Volver al home</button>
+</div>

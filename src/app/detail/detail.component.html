@@ -1,0 +1,18 @@
+<app-nav>   </app-nav>
+
+<h2>Producto seleccionado</h2>
+
+<ol>
+    <li>
+        Nombre del producto: {{jugador.nombre}}
+    </li>
+    <li>
+        Precio del producto: {{jugador.apellido}}
+    </li>
+    <li>
+        Stock disponible del producto: {{jugador.posicion}}
+    </li>
+    <img [src]="jugador.imagen" />
+</ol>
+
+<button [routerLink]="['/home']">Volver al home</button>
