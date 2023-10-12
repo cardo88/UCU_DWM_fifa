@@ -15,4 +15,8 @@ export class ListComponent {
     this.jugadores = this.servicio.obtenerJugadores();
   }
 
+  checkSearchEmpty(){
+    return this.jugadores.length===0;
+  }
+
 }
